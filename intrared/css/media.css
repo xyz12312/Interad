@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+@media only screen and (max-device-width: 767px) {
+	.navbar-brand > img {
+		margin-top:10px;
+	}  
+	.navbar-nav > li > a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	footer ul{
+		padding: 0px;
+		float: left;
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	footer ul li{
+		text-align:center !important;
+	}
+	footer {
+		padding: 50px 0px;
+	}
+	.border-right{
+		border-right:none;
+	}
+	#restaurant-menu .hotel-name{
+		padding:30px 20px;
+	}
+	.margin-top{
+		margin-top:20px;
+	}
+	.tabs-left {
+		border-right: none !important;
+	}
+	.tabs-left > li > a {
+		border-radius: 0px 0px 0px 0px !important;
+		margin-right: 0px;
+		display: block;
+	}
+	.menu-block{
+		padding:0px;
+	}
+
+
+
+}
+
+@media only screen and (max-device-width: 480px) {
+	footer {
+		padding: 50px 0px;
+	}
+	.effect2::before, .effect2::after {
+		display: none;
+	}
+	#your-order{
+		text-align:center;
+	}
+	#your-order h1{
+		font-size: 28px;
+	}
+	#login h1{
+		font-size: 28px;
+	}
+	#login h2{
+		font-size: 18px;
+	}
+	#login{
+	}
+	.login-form form button, .signup-form form button {
+		width:100%;
+	}
+	.hotel-name{
+		text-align:center;
+	}
+}
+@media only screen and (max-device-width: 320px) {
+	.navbar-brand {
+		float: none;
+	}
+	.navbar-brand > img {
+		margin-top:10px;
+	}  
+	.white-bg {
+	    padding: 20px;
+	}
+	#advantages h2 {
+		margin-bottom: 40px;
+	}
+	footer {
+		padding: 50px 0px;
+	}
+	footer ul{
+		padding: 0px;
+		float: left;
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	.carousel {
+		height: auto;
+		padding:0px 0px 30px 0px;
+	}
+	#testimonial .carousel-inner .col-sm-5{
+		padding-top: 10px !important;
+		text-align: center;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,161 @@
+﻿<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,;'/;'/[;'/';/[;'/[;'/[;'/;'/'';///////////////=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!--<link rel="styleSheet" type="text/css" href="css/style.css"/>-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link href='https://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+
+    <script type="text/javascript">
+        document.getElementById('submitID').disabled = true;
+        function ValidatePassKey(tb) {
+            if (tb.TextLength >= 4)
+                document.getElementById(tb.id + 1).focus();
+        }
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+        function showDivFunction() {
+            var x = document.getElementById('bussinessDivID');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+        function submitBtn() {
+            alert("Form Submitted");
+        }
+    </script>
+
+</head>
+<body ng-app="" class="container">
+    <form name="myForm" novalidate>
+        <header class="top_header">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="col-sm-12 col-xs-12 logo header_container">
+                            <figure>
+                                <img src="img/interad_logo.png" alt="headerlogo">
+                            </figure>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!---end header-->
+        <!--start main container--->
+        <section id="main container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-sm-12 col-xs-12 crd_main_img">
+                            <figure>
+                                <img src="img/Sample_CreditCard.png" alt="creditcardimg" class="center-block">
+                                <p class="text-info">What can the <span class="inside_txt">Interad<sup>Ⓒ</sup>card</span><span id="hid"><br></span> do for you?</p>
+
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!---end main container--->
+        <!--start Form container-->
+        <section id="form_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-sm-12 col-md-12">
+                            <div class="form_dlt">
+                                <p class="form_text">Simply Complete the form below to enter <span id="hid1"><br> the cashback<sup>8</sup>contest for a chance to<br> win<sup>**</sup>1 to 10 trips worth <sup>$</sup>1000.</span></p>
+                            </div>
+                            <div class="fill_form col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                    <p>Your Name <span><i>as it appears on the credit card</i></span></p>
+                                    <input type="text" class="col-md-6" name="fname" ng-model="fname" placeholder="Name" required>
+                                    <span style="color:red" ng-show="myForm.fname.$dirty && myForm.fname.$invalid">
+                                        <span ng-show="myForm.fname.$error.required">Username is required.</span>
+                                    </span>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                    <p>Email</p>
+                                    <input type="email" class="col-md-6" name="email" ng-model="email" placeholder="Email" required>
+                                    <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                                        <span ng-show="myForm.email.$error.required">Email is required.</span>
+                                        <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                                    </span>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12 margin-top">
+                                    <p>Interad CashBack Credit Card Number</p>
+                                    <div class="col-md-2 col-sm-12 col-xs-2">
+                                        <input id="1" type="text" class="form-control" placeholder="xxxx" onkeypress="return isNumberKey(event)" onchange="ValidatePassKey(this)" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-2 col-sm-12 col-xs-2">
+                                        <input id="2" type="text" class="form-control" placeholder="xxxx" onkeypress="return isNumberKey(event)" onchange="ValidatePassKey(this)" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-2 col-sm-12 col-xs-2">
+                                        <input id="3" type="text" class="form-control" placeholder="xxxx" onkeypress="return isNumberKey(event)" onchange="ValidatePassKey(this)" maxlength="4" />
+                                    </div>
+                                    <div class="col-md-2 col-sm-12 col-xs-2">
+                                        <input id="4" type="text" class="form-control" placeholder="xxxx" onkeypress="return isNumberKey(event)" maxlength="4" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12 margin-top">
+                                    <p>DayTime Phone Number</p>
+                                    <input type="text" class="col-md-6" name="pnumber"  ng-model="pnumber" placeholder="Phone Number" maxlength="10" onkeypress="return isNumberKey(event)" required>
+                                    <span style="color:red" ng-show="myForm.pnumber.$dirty && myForm.pnumber.$invalid">
+                                        <span ng-show="myForm.pnumber.$error.required">&nbsp;&nbsp;Missing Information</span>
+                                    </span>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 bdrinfo">
+                                    <p>Why do you deserve this money?</p>
+                                    <textarea class="form-control" rows="5" id=""></textarea>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 bdrinfo">
+
+                                    <input type="checkbox" value="" onchange="showDivFunction()">I am registering an Interad<sup>Ⓒ</sup> Business card
+                                    <div id="bussinessDivID" class="col-md-12 col-sm-12 col-xs-12 margin-top"  style="display:none;">
+                                        <p>Business Name <span>as it appears on the credit card</span></p>
+                                        <input type="text" class="col-md-4" name="bname" placeholder="Name"><br ><br>
+                                        <div>
+                                            <input type="checkbox" value="">&nbsp;I certify that I am the owner of the business
+                                            <p class="text-info" style="text-align:left;font-size:smaller"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note: If an Interad Platinum Card member is selected as a potential winner</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 contain-info">
+                                    <input type="checkbox" value="">I have read and agree to the official <span>contest Rules and Regulations</span><br>
+                                    <p class="text-info" style="font-size:xx-small;text-align:left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No purchase neccessary. Contest starts April 1, 2013 and ends may 31,2013.</p>
+                                </div>
+                                <div class="form-group bdrinfo">
+
+
+
+                                    <button type="submit" id="submitID" name="button2id" class="btn btn-danger pull-right" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
+myForm.email.$dirty && myForm.email.$invalid || myForm.pnumber.$dirty && myForm.pnumber.$invalid" onclick="submitBtn()">Submit Entry</button>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+   
+</body>
+</html>
